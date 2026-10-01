@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Кофейня №14 — кофе и круассаны в центре Минска</title>
+<meta name="description" content="Кофе, тёплые круассаны, десерты и завтраки. Минск, ул. Интернациональная 14. Ежедневно до 22:00.">
+<meta name="theme-color" content="#14100d"><link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><a class="brand" href="#home"><img src="img/logo.png" alt="" width="40" height="40"><span>Кофейня №14</span></a>
+<nav id="nav"><a href="#about">О нас</a><a href="#menu">Меню</a><a href="#gallery">Галерея</a><a href="#reviews">Отзывы</a><a href="#book">Бронь</a><a href="#contacts">Контакты</a></nav>
+<a class="btn sm" href="tel:+375296141714">Позвонить</a><button id="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i><i></i></button></header>
+
+<section class="hero" id="home"><div class="hero-in"><p class="rate">★ 4,7 · 1 071 отзыв · Открыто до 22:00</p>
+<h1>Тёплые круассаны<br>и кофе, который<br>хочется растянуть</h1>
+<p class="lead">Флэт уайт, латте, десерты и завтраки в центре Минска. С 20:00 — скидка 50% на круассаны в последний час работы.</p>
+<div class="row"><a class="btn" href="#menu">Смотреть меню</a><a class="btn ghost" href="#book">Забронировать стол</a></div></div></section>
+
+<section id="about" class="sec"><h2 class="c">Что у нас вкусно</h2><div class="cards">
+<article class="card"><h3>Кофе</h3><p>Флэт уайт, капучино, латте и айс-латте. Бариста сделают и напиток не из меню.</p><img src="img/latte-art.jpg" alt="Капучино с латте-артом" loading="lazy"><button class="btn sm" data-go="coffee">Кофе в меню</button></article>
+<article class="card"><h3>Выпечка</h3><p>Слоёные круассаны с ягодами и фисташкой, выходят из печи тёплыми.</p><img src="img/croissant.jpg" alt="Круассаны с ягодами" loading="lazy"><button class="btn sm" data-go="bakery">Выпечка в меню</button></article>
+<article class="card"><h3>Завтраки</h3><p>Сэндвичи на ржаном хлебе, тосты и гранола с йогуртом до полудня и позже.</p><img src="img/sandwich.jpg" alt="Сэндвич с ростбифом" loading="lazy"><button class="btn sm" data-go="food">Завтраки в меню</button></article></div></section>
+
+<section id="menu" class="sec dark"><h2 class="c">Меню</h2>
+<div class="tabs" role="tablist"><button class="on" data-f="all">Все</button><button data-f="coffee">Кофе</button><button data-f="bakery">Выпечка</button><button data-f="food">Завтраки</button><button data-f="dessert">Десерты</button></div>
+<div class="grid" id="grid"></div></section>
+
+<section id="gallery" class="sec"><h2 class="c">Атмосфера</h2><div class="gal" id="gal"></div></section>
+
+<section id="reviews" class="sec dark"><h2 class="c">Гости пишут</h2><div class="cards" id="rev"></div></section>
+
+<section id="book" class="sec"><div class="book"><div><h2>Забронировать стол</h2><p class="lead">Отметьте день, время и число гостей — мы подтвердим по телефону.</p></div>
+<form id="form" novalidate><label>Имя<input name="n" required autocomplete="name"></label><label>Телефон<input name="p" type="tel" required autocomplete="tel" placeholder="+375 ..."></label>
+<div class="two"><label>Дата<input name="d" type="date" required></label><label>Время<input name="t" type="time" required min="08:00" max="21:30"></label></div>
+<label>Гостей<select name="g"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label>
+<button class="btn" type="submit">Отправить заявку</button><p id="msg" role="status"></p></form></div></section>
+
+<section id="contacts" class="sec dark"><h2 class="c">Как нас найти</h2><div class="cont">
+<p>ул. Интернациональная 14, Минск, 220030<br>Ежедневно, закрываемся в 22:00</p>
+<div class="row"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=ул.+Интернациональная+14+Минск">Проложить маршрут</a><a class="btn ghost" href="tel:+375296141714">8 029 614-17-14</a><button class="btn ghost" id="share">Поделиться</button><button class="btn ghost" id="copy">Скопировать адрес</button></div></div></section>
+
+<footer><span>© Кофейня №14, Минск</span><a href="#home">Наверх ↑</a></footer>
+<div id="cart" hidden><span id="cc">0</span> поз. · <b id="ct">0</b> BYN <button class="btn sm" id="order">Заказать</button><button id="clr" aria-label="Очистить">✕</button></div>
+<div id="lb" hidden><button aria-label="Закрыть">✕</button><img alt=""></div><div id="toast" role="status"></div>
+<script src="script.js"></script></body></html>
